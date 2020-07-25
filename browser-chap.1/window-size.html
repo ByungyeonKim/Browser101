@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Size</title>
+    <style>
+      .tag {
+        background-color: sandybrown;
+        display: inline-block;
+        padding: 24px;
+        margin: 15px;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tag"></div>
+    <script>
+      // 1.tag class 정의
+      const tag = document.querySelector(".tag");
+      // 2.tag class에 윈도우 사이즈들을 출력하는 함수 정의
+      function updateTag() {
+        tag.innerHTML = `
+        window.screen : ${window.screen.width}, ${window.screen.height} <br />
+        window.outer : ${window.outerWidth}, ${window.outerHeight} <br />
+        window.inner : ${window.innerWidth}, ${window.innerHeight} <br />
+        window.document-client : ${window.document.documentElement.clientWidth}, ${window.document.documentElement.clientHeight}`;
+      }
+      //윈도우창이 리사이즈 될때마다 함수 호출
+      window.addEventListener("resize", () => {
+        updateTag();
+      });
+      //첫 화면 호출
+      updateTag();
+    </script>
+  </body>
+</html>
