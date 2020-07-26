@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Load</title>
+    <!-- HTML이 전부 로드 된 후 DOMContentLoaded가 호출되기 전에 호출 -->
+    <script src="test.js" defer></script>
+  </head>
+  <body>
+    <script>
+      // HTML이 로드가 되면 콜백함수 호출
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded');
+      });
+      // 페이지의 필요한 모든 리소스(CSS, images..)가 로드 된 후 콜백함수 출력
+      window.addEventListener('load', () => {
+        console.log('load');
+      });
+      // 언로드가 되기 전에 호출 > 사용자가 페이지를 나가기 전에 호출해야 할때
+      window.addEventListener('beforeunload', () => {
+        console.log('beforeunload');
+      });
+      // 리소스가 호출 되기전에 호출 > 페이지가 언로드 되기전에 쿠키나 캐쉬를 지워야 할때(더이상 필요 없는 자원들)
+      window.addEventListener('unload', () => {
+        console.log('unload');
+      });
+    </script>
+  </body>
+</html>
