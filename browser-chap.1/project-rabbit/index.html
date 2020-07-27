@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a rabbit</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: black;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: auto;
+      }
+
+      button {
+        outline: none;
+        margin: 18px 0px;
+        font-size: 28px;
+        background-color: #6495ed;
+        cursor: pointer;
+        color: white;
+      }
+
+      #rabbit {
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="find-btn">Find a rabbit🐰</button>
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img id="rabbit" src="imgs/rabbit.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+    <img src="imgs/carrot.png" alt="" />
+
+    <script>
+      const findBtn = document.querySelector('.find-btn');
+      const rabbit = document.querySelector('#rabbit');
+      findBtn.addEventListener('click', () => {
+        // 1.클릭 시 스크롤이 부드럽게 내려가고, 지정한 토끼가 가운데에 위치하게 된다.
+        rabbit.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // 2.클릭 시 잘 보이게 보더 생성
+        rabbit.style.border = '2px solid #6495ed';
+      });
+    </script>
+  </body>
+</html>
