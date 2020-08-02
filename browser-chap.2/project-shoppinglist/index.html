@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/096073a2a8.js"
       crossorigin="anonymous"
@@ -16,20 +16,13 @@
       <header class="header">Shopping List</header>
       <ul class="items">
         <!-- li 자식요소에 div를 넣어도 된다 -->
-        <li class="list__row">
-          <div class="item">
-            <span class="item__name">
-              통후추
-            </span>
-            <button class="item__delete">
-              <i class="fas fa-trash-alt"></i>
-            </button>
-          </div>
-          <div class="item__divider"></div>
-        </li>
       </ul>
       <footer class="footer">
-        <input type="text" class="footer__input" />
+        <input
+          type="text"
+          class="footer__input"
+          placeholder="쇼핑할 아이템들을 입력하세요."
+        />
         <button class="footer__btn">
           <i class="fas fa-plus"></i>
         </button>

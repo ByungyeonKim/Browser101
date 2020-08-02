@@ -54,6 +54,7 @@ button {
 /* 아이템 섹션  */
 .items {
   height: 500px;
+  overflow-y: auto;
 }
 
 .item {
