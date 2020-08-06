@@ -5,6 +5,10 @@ button {
   border: none;
 }
 
+body {
+  background-color: black;
+}
+
 .game {
   background: url(imgs/background.png) center/cover;
   width: 800px;
@@ -39,17 +43,23 @@ button {
   font-size: 38px;
   color: whitesmoke;
   visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: coral;
   border-radius: 50%;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-  font-size: 42px;
+  width: 50px;
+  height: 50px;
+  font-size: 38px;
   color: white;
   visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game__field {
@@ -89,4 +99,14 @@ button {
   margin-top: 18px;
   display: block;
   font-size: 38px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }
