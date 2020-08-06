@@ -13,10 +13,15 @@
 
 #### Chap.1
 
-1.프로젝트 007
+1.007 ◎
 <img width="1536" alt="스크린샷 2020-07-29 오후 4 11 25" src="https://user-images.githubusercontent.com/66554164/88768559-3a43db00-d1b6-11ea-83b8-b39e27f98f43.png">
 
 ---
 
-2.프로젝트 토끼찾기
+2.토끼찾기 🐰
 <img width="1536" alt="스크린샷 2020-07-29 오후 4 17 19" src="https://user-images.githubusercontent.com/66554164/88769141-01583600-d1b7-11ea-81b1-4ff932071c96.png">
+
+### Chap.2
+
+1.당근뽑기 게임 🥕
+<img width="1536" alt="carrot-picking" src="https://user-images.githubusercontent.com/66554164/89569252-666af600-d85f-11ea-9e00-035ad41f2898.png">
