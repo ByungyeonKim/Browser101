@@ -1,5 +1,5 @@
 'use strict';
-import Field from './field.js';
+import { Field, ItemType } from './field.js';
 import * as sound from './sound.js';
 
 // Reason 안에 있는 멤버만 써야하기 때문에 실수할 가능성이 적어짐
@@ -85,14 +85,13 @@ class Game {
     if (!this.started) {
       return;
     }
-    const target = event.target;
-    if (target.matches('.carrot')) {
+    if (item === ItemType.carrot) {
       this.score++;
       this.updateScoreBoard();
       if (this.score === this.carrotCount) {
         this.stop(Reason.win);
       }
-    } else if (item === 'bug') {
+    } else if (item === ItemType.bug) {
       this.stop(Reason.lose);
     }
   };
