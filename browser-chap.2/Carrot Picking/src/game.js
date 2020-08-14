@@ -2,8 +2,16 @@
 import Field from './field.js';
 import * as sound from './sound.js';
 
+// Reason 안에 있는 멤버만 써야하기 때문에 실수할 가능성이 적어짐
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+export const Reason = Object.freeze({
+  win: 'win',
+  lose: 'lose',
+  cancel: 'cancel',
+});
+
 // Builder Pattern - 가독성이 좋게
-export default class GameBuilder {
+export class GameBuilder {
   gameDuration(duration) {
     this.gameDuration = duration;
     return this;
@@ -71,7 +79,7 @@ class Game {
     this.hideGameBtn();
     sound.playAlert();
     sound.stopBackground();
-    this.onGameStop && this.onGameStop('cancel');
+    this.onGameStop && this.onGameStop(Reason.cancel);
   }
 
   finish(win) {
@@ -84,7 +92,7 @@ class Game {
     }
     this.stopGameTimer();
     sound.stopBackground();
-    this.onGameStop && this.onGameStop(win ? 'win' : 'lose');
+    this.onGameStop && this.onGameStop(win ? Reason.win : Reason.lose);
   }
 
   onItemClick = (item) => {
